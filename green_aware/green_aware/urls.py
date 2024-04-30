@@ -20,4 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),  # Directs root URL to main app
+    # path('accounts/', include('accounts.urls')),  # Directs accounts URL to main app
+    path('accounts/', include('allauth.urls')),
+    
 ]
