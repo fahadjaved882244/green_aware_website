@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import SignUpView, CustomLoginView
+from .views import register_user, login_user, verify_email
 
 urlpatterns = [
-    path('signup/', SignUpView.as_view(), name='signup'),
-    path('login/', CustomLoginView.as_view(), name='login'),
+    path('signup/', register_user, name='signup'),
+    path('login/', login_user, name='login-user'),
+    path('verify-email/<uidb64>/<token>/', verify_email, name='verify-email'),
 ]

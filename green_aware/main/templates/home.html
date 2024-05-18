@@ -1,0 +1,86 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greenaware</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .banner {
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .banner-1 {
+      background-image: url('https://images.unsplash.com/photo-1523978591478-c753949ff840');
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Greenaware</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'signup' %}">Register</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Banners -->
+  <div class="banner banner-1"></div>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <h1>Welcome to Greenaware</h1>
+    <p>
+      Global warming is characterised as long-term changes to planetary average weather patterns (National
+      Geographic, n.d.) which have significant effects on local, regional and global climates (Nasa.gov, n.d.). Global
+      warming is driven by human activity - specifically, fossil fuel use resulting in increased greenhouse gas levels
+      raising Earth’s average surface temperature (Nasa.gov, n.d.). Climate change caused by Global warming results
+      in sea level changes linked to melting of polar ice sheets and glaciers causing widespread flooding and other
+      forms of extreme weather such as intense droughts (National Geographic, n.d.).
+    </p>
+    <p>
+      In this contrived scenario, a UK-based charity, Greenaware, is concerned with the climate changes caused by
+      Global Warming. Greenaware’s mission is to collect data to improve awareness and drive predictive modelling
+      initiatives with the overarching goals of supporting scientific research and affecting government policy.
+      Greenaware’s services will allow climate-change conscious individuals and groups around the Earth to register
+      and contribute by providing climate readings and observations related to their local regions at intervals.
+      What3words a ‘proprietary geocode system designed to identify any location on the surface of Earth with a
+      resolution of about 3 meters' (What3words, n.d.), will be used to convey precise geographic coordinates.
+      Registered contributors, termed ‘Observers’ will first have to complete an online educational course before
+      qualifying to contribute data. They will then be paid a monthly stipend to their accounts as a token of gratitude
+      for their support.
+    </p>
+    <a href="{% url 'submit-observation' %}" class="btn btn-success btn-lg">Submit Observation</a>
+    <p></p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2024 Greenaware. All rights reserved.</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

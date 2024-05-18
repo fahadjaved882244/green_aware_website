@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Greenaware</title>
+  <title>Sign Up - Greenaware</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .login-container {
+    .signup-container {
       display: flex;
       min-height: 100vh;
     }
 
-    .login-image {
+    .signup-image {
       background-image: url('https://images.unsplash.com/photo-1501854140801-50d01698950b');
       background-size: cover;
       background-position: center;
       width: 50%;
     }
 
-    .login-form {
+    .signup-form {
       width: 50%;
       display: flex;
       flex-direction: column;
@@ -55,25 +55,18 @@
     </button>
   </nav>
 
-  <!-- Login Container -->
-  <div class="login-container">
+  <!-- Signup Container -->
+  <div class="signup-container">
     <!-- Image Section -->
-    <div class="login-image"></div>
+    <div class="signup-image"></div>
 
     <!-- Form Section -->
-    <div class="login-form">
-      <h2>Login</h2>
-      <form method="post">
+    <div class="signup-form">
+      <h1>Register User</h1>
+      <form method="post" class="form-group">
         {% csrf_token %}
-        <div class="form-group">
-          <label for="id_email">Email address</label>
-          {{ form.email }}
-        </div>
-        <div class="form-group">
-          <label for="id_password">Password</label>
-          {{ form.password }}
-        </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Register</button>
       </form>
     </div>
   </div>

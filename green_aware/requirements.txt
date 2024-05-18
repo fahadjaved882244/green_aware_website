@@ -1,0 +1,5 @@
+Django
+django-allauth
+dj-rest-auth
+requests
+what3words
